@@ -1,0 +1,63 @@
+[
+
+  {
+    "name" : "Md. Rony",
+    "email" : "rony@gmail.com",
+    "password" : "1234",
+    "mobile" : "01001010010",
+    "age" : "23",
+    "username" : "rony",
+    "salutation" : "MD",
+    "gender" : "MALE",
+    "homeTown" : "Noakhali",
+    "dateOfBirth" : "1998-06-26",
+    "countryCode" : "BD",
+    "roles" : [ "ADMIN",  "USER", "EDITOR" ]
+  },
+
+  {
+    "name" : "MR. Rony",
+    "email" : "rony1@gmail.com",
+    "password" : "1234",
+    "mobile" : "01001010010",
+    "dateOfBirth" : "1998-06-26",
+    "age" : "23",
+    "username" : "rony1",
+    "salutation" : "MD",
+    "gender" : "MALE",
+    "homeTown" : "Noakhali",
+    "countryCode" :  "BD",
+    "roles" : ["USER"]
+  },
+
+  {
+    "name" : "Rony",
+    "email" : "rony2@gmail.com",
+    "password" : "1234",
+    "mobile" : "01001010010",
+    "dateOfBirth" : "1998-06-26",
+    "age" : "23",
+    "username" : "rony2",
+    "salutation" : "MD",
+    "gender" : "MALE",
+    "homeTown" : "Noakhali",
+    "countryCode" : "BD",
+    "roles" : ["USER"]
+  },
+
+  {
+    "name" : "Admin",
+    "email" : "admin@gmail.com",
+    "password" : "1234",
+    "mobile" : "01001010010",
+    "dateOfBirth" : "1998-06-26",
+    "age" : "23",
+    "username" : "admin",
+    "salutation" : "MD",
+    "gender" : "MALE",
+    "homeTown" : "Noakhali",
+    "countryCode" : "BD",
+    "roles" : ["ADMIN"]
+  }
+
+]

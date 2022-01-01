@@ -1,0 +1,23 @@
+[
+
+  {
+    "name": "ADMIN"
+  },
+
+  {
+    "name": "USER"
+  },
+
+  {
+    "name": "EDITOR"
+  },
+
+  {
+    "name": "SUPER_ADMIN"
+  },
+
+  {
+    "name": "GUEST"
+  }
+
+]

@@ -37,9 +37,14 @@ public class AuthFIlter extends AbstractAuthenticationProcessingFilter {
             throws AuthenticationException, IOException, ServletException {
 
         String tokenUnstripped = httpServletRequest.getHeader(AUTHORIZATION);
-        String token = StringUtils
-                .removeStart( Optional.ofNullable(tokenUnstripped).orElse(""), "Bearer")
-                .trim();
+        String token = "";
+        if(tokenUnstripped != null && tokenUnstripped.startsWith("Bearer ") && tokenUnstripped.length() > "Bearer null".length()){
+             token = tokenUnstripped.substring("Bearer ".length());
+             // check token
+        }
+//        String token = StringUtils
+//                .removeStart( Optional.ofNullable(tokenUnstripped).orElse(""), "Bearer")
+//                .trim();
 
         Authentication authentication;
         if (token.isEmpty()) {

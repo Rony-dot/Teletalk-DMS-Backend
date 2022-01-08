@@ -52,8 +52,8 @@ public class UserService {
         user.setDateOfBirth(LocalDate.parse(dateOfBirth));
         // Bcrypt password
         user.setPassword(passwordEncoder.encode(userInfoDto.getPassword()));
-        if(userInfoDto.getRoles().isEmpty()){
-            roleRepository.findByName ("ROLE_USER").ifPresent (role -> {
+        if(userInfoDto.getRoles() == null ){
+            roleRepository.findByName ("USER").ifPresent (role -> {
                 user.setRoles (List.of (role.getName ()));
                 log.info("adding default role : {}, tp user : {}", role.getName(), user.getUsername());
             });

@@ -52,8 +52,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .sessionCreationPolicy (SessionCreationPolicy.STATELESS) // We don't need to create any session
                 // also we don't need to store any value in the session
                 .and ()
-                .authorizeRequests().antMatchers("/login", "/register").permitAll()
-                .antMatchers("/employees/**","/customers/**").hasAnyRole("ADMIN","EDITOR","SUPER_ADMIN")
+                .authorizeRequests().antMatchers("/login", "/register","/view/**").permitAll()
+                .antMatchers("/employees/**","/customers/**", "/users/**").hasAnyRole("ADMIN","EDITOR","SUPER_ADMIN")
                 .antMatchers("/demo/**").hasAnyRole("USER")
                 .and()
                 .authenticationProvider (authenticationProvider)

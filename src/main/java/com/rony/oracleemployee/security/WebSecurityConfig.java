@@ -53,8 +53,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 // also we don't need to store any value in the session
                 .and ()
                 .authorizeRequests().antMatchers("/login", "/register","/view/**").permitAll()
-                .antMatchers("/employees/**","/customers/**", "/users/**").hasAnyRole("ADMIN","EDITOR","SUPER_ADMIN")
-                .antMatchers("/demo/**").hasAnyRole("USER")
+                .antMatchers("/demo/**", "users/{id}").hasAnyRole("USER")
+                .antMatchers("/accessControls/**","/employees/**","/customers/**","users/all").hasAnyRole("USER")
+//                .hasAnyRole("ADMIN","EDITOR","SUPER_ADMIN")
                 .and()
                 .authenticationProvider (authenticationProvider)
                 .addFilterBefore (authFIlter (), AnonymousAuthenticationFilter.class) // Will handle authentication

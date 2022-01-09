@@ -16,11 +16,12 @@ import javax.persistence.*;
 @NoArgsConstructor
 public class AccessControl {
     @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private long id;
-    private boolean emp_phone = false;
     private boolean emp_email = false;
-    private boolean emp_manager_id = false;
+    private boolean emp_phone = false;
     private boolean emp_hire_date = false;
+    private boolean emp_manager_id = false;
     private boolean emp_job_title = false;
     private boolean cus_address = false;
     private boolean cus_credit_limit = false;

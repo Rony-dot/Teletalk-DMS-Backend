@@ -44,6 +44,9 @@ public class UserService {
     @Autowired
     private PasswordEncoder passwordEncoder;
 
+    @Autowired
+    private AccessControlService accessControlService;
+
     public void addUser(UserInfoDto userInfoDto){
         var user = new User();
         BeanUtils.copyProperties(userInfoDto,user);
@@ -60,7 +63,8 @@ public class UserService {
         }
 
         tokenService.generateToken (user);
-        userRepository.save(user);
+        User savedUser = userRepository.save(user);
+        accessControlService.generateDefaultValues(savedUser);
     }
 
 //    public void addRoleToUser(String username, String roleName) {

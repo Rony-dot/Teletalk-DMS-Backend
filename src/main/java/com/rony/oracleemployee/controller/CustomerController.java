@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/customers")
@@ -18,6 +19,12 @@ public class CustomerController {
     @GetMapping("")
     public ResponseEntity<List<Customer>> getAll(){
         return  ResponseEntity.ok(customerRepository.findAll());
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Customer> getById(@PathVariable long id){
+        Optional<Customer> customer = customerRepository.findById(id);
+        return customer.map(ResponseEntity::ok).orElse(null);
     }
 
     @PutMapping("/{id}")

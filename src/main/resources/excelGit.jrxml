@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.5.1.final using JasperReports Library version 6.5.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4_1" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="81bf5e97-602a-4005-ac1e-dc620119b4d9">
+    <property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+    <style name="Default Font Setter Style" isDefault="true" fontSize="11"/>
+    <parameter name="name" class="java.lang.String"/>
+    <parameter name="description" class="java.lang.String"/>
+    <queryString>
+        <![CDATA[]]>
+    </queryString>
+    <field name="id" class="java.lang.Long"/>
+    <field name="name" class="java.lang.String"/>
+<!--    <field name="phoneNumber" class="java.lang.String"/>-->
+<!--    <field name="petitionSignTime" class="java.util.Date"/>-->
+    <columnHeader>
+        <band height="21">
+            <property name="com.jaspersoft.studio.unit.height" value="cm"/>
+            <property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.HorizontalRowLayout"/>
+            <staticText>
+                <reportElement x="0" y="0" width="141" height="21" uuid="ace8e2fb-a0a0-45fc-b63a-9288c893beab"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[id]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="141" y="0" width="138" height="21" uuid="8a910cea-ee5b-479c-9212-b968178510c7"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[name]]></text>
+            </staticText>
+<!--            <staticText>-->
+<!--                <reportElement x="279" y="0" width="138" height="21" uuid="8646b765-aeec-4924-8757-c777494d74d8"/>-->
+<!--                <textElement textAlignment="Center" verticalAlignment="Middle">-->
+<!--                    <font isBold="true"/>-->
+<!--                </textElement>-->
+<!--                <text><![CDATA[მობილური ტელეფონის ნომერი]]></text>-->
+<!--            </staticText>-->
+<!--            <staticText>-->
+<!--                <reportElement x="417" y="0" width="138" height="21" uuid="652cc5f7-a5c9-4c84-97dd-b2392ee8dfdf"/>-->
+<!--                <textElement textAlignment="Center" verticalAlignment="Middle">-->
+<!--                    <font isBold="true"/>-->
+<!--                </textElement>-->
+<!--                <text><![CDATA[მობილური ტელეფონის ნომერი]]></text>-->
+<!--            </staticText>-->
+        </band>
+    </columnHeader>
+    <detail>
+        <band height="21">
+            <textField>
+                <reportElement x="0" y="0" width="141" height="21" uuid="b3253ca0-d0ff-449a-b6b5-9b9e5cf9d3e7"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="141" y="0" width="139" height="21" uuid="bb134782-42e6-4be4-b5b8-921c7432beaa"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+            </textField>
+<!--            <textField>-->
+<!--                <reportElement x="280" y="0" width="137" height="21" uuid="9e64e039-b830-4545-be01-b1b57ae39975"/>-->
+<!--                <textElement textAlignment="Center" verticalAlignment="Middle"/>-->
+<!--                <textFieldExpression><![CDATA[$F{phoneNumber}]]></textFieldExpression>-->
+<!--            </textField>-->
+<!--            <textField>-->
+<!--                <reportElement x="417" y="0" width="138" height="21" uuid="9676485b-e997-4606-9ca6-b0aa6263b051"/>-->
+<!--                <textElement textAlignment="Center" verticalAlignment="Middle"/>-->
+<!--                <textFieldExpression><![CDATA[$F{petitionSignTime}]]></textFieldExpression>-->
+<!--            </textField>-->
+        </band>
+    </detail>
+</jasperReport>
